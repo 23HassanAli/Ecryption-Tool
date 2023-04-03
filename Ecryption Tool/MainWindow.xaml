@@ -1,0 +1,40 @@
+﻿<Window x:Class="Ecryption_Tool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ecryption_Tool"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+  
+            <TabControl Name="tcSample">
+                <TabItem Header="Sleutels Aanmaken">
+                    <StackPanel>
+                        <Label Content="Naam  van de sleutel" FontSize="20"/>
+                        <TextBox x:Name="txtboxSleutel" Width="200" HorizontalAlignment="Left" FontSize="20"></TextBox>
+                        <StackPanel Orientation="Horizontal" Margin="0,20">
+                            <Button x:Name="BtnAesGen" Content="Genereer AES sleutel" FontSize="20" Margin="10,0" Padding="10" Click="BtnAesGen_Click"></Button>
+                            <Button x:Name="btnRsaSleutel" Content="Genereer RSA sleutel" FontSize="20" Margin="10,0" Click="btnRsaSleutel_Click"></Button>
+                            <TextBlock x:Name="TxtBlockEncryption" ></TextBlock>
+                            <TextBlock x:Name="TxtBlockDecryption" ></TextBlock>
+                            <Label Name="label1"></Label>
+                        </StackPanel>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="AES">
+                    <StackPanel>
+                        <Button x:Name="BtnReadFile" Content="Read File" Width="150" FontSize="30" Click="BtnReadFile_Click"></Button>
+                        <Label Name="lblOutput" ></Label>
+                    </StackPanel>
+                   
+                </TabItem>
+                <TabItem Header="RSA" >
+                    <Label>RSA</Label>
+                </TabItem>
+            </TabControl>
+
+        </DockPanel>
+    </Grid>
+</Window>

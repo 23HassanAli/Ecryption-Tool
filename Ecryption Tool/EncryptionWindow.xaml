@@ -1,0 +1,55 @@
+﻿<Window x:Class="Ecryption_Tool.EncryptionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ecryption_Tool"
+        mc:Ignorable="d"
+        Title="EncryptionWindow" Height="570" Width="960" Loaded="Window_Loaded">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Genereer AES key">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="buttonCreateAsmKeys" Grid.Column="0" Content="CreateAsmKeys" Click="buttonCreateAsmKeys_Click" Width="120" Height="50"  FontSize="16"></Button>
+                    <Label x:Name="label1" Grid.Column="1" Width="200" FontSize="16" Height="150"></Label>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Genereer RSA keys" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="buttonGetPrivateKey" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Get private Key" Click="buttonGetPrivateKey_Click" Width="150" Height="50"  FontSize="16"></Button>
+                    <Button x:Name="buttonExportPublicKey" Grid.Column="1" Content="Export Public Key" Click="buttonExportPublicKey_Click" Width="150" Height="50"  FontSize="16"></Button>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Encrypt en decrypt" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="buttonEncryptFile" Grid.Column="0" Content="EncryptFile" Visibility="Visible" Click="buttonEncryptFile_Click" Width="120" Height="50"  FontSize="16"></Button>
+                    <Button x:Name="buttonDecryptFile" Grid.Column="1" Content="DecryptFile" Click="buttonDecryptFile_Click" Width="120" Height="50" FontSize="16"></Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Import Public Key" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="buttonImportPublicKey" Grid.Column="0" Content="Import Public Key" Click="buttonImportPublicKey_Click" Width="150" Height="50"  FontSize="16"></Button>
+                    <Label x:Name="label2" Grid.Column="1" Width="200" FontSize="16" Height="120"></Label>
+                </Grid>
+            </TabItem>
+     
+        </TabControl>
+    </Grid>
+</Window>
